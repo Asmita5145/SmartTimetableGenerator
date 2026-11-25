@@ -6,3 +6,5 @@ node_modules/
 !.env.example
 dist/
 build/
+TEST_CREDENTIALS.md
+server.zip

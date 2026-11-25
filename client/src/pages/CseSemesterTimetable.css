@@ -1,0 +1,1099 @@
+.cse-timetable-page {
+  width: 100%;
+  padding: 8px 4px 40px;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.cse-timetable-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.page-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.cse-timetable-header h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.15;
+}
+
+.cse-timetable-header p {
+  margin: 10px 0 0;
+  opacity: 0.65;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.header-status {
+  padding: 10px 15px;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #22c55e;
+  margin-right: 7px;
+}
+
+/* ==========================================
+   CONFIGURATION
+========================================== */
+
+.configuration-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+.configuration-title h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.configuration-title p {
+  margin: 6px 0 20px;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.configuration-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 18px;
+  align-items: end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-group select {
+  height: 46px;
+  border: 1px solid #d9dee8;
+  border-radius: 10px;
+  padding: 0 13px;
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.generate-button {
+  height: 46px;
+  border: 0;
+  border-radius: 10px;
+  padding: 0 22px;
+  background: #4f46e5;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.generate-button:hover:not(:disabled) {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.generate-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.selection-summary {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #edf0f4;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.summary-separator {
+  opacity: 0.35;
+}
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.generation-error {
+  display: flex;
+  gap: 14px;
+  padding: 17px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  border: 1px solid #fecaca;
+  background: #fff5f5;
+  color: #991b1b;
+}
+
+.error-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #dc2626;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.generation-error strong {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.generation-error pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   SUMMARY
+========================================== */
+
+.timetable-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 15px;
+  padding: 18px 20px;
+}
+
+.summary-card span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.summary-card strong {
+  font-size: 25px;
+}
+
+.valid-text {
+  color: #16a34a;
+}
+
+.invalid-text {
+  color: #dc2626;
+}
+
+/* ==========================================
+   BATCH FILTER
+========================================== */
+
+.batch-filter-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 15px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.batch-filter-card h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+}
+
+.batch-filter-card p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.batch-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.batch-button {
+  border: 1px solid #dce1ea;
+  background: white;
+  padding: 8px 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.batch-button:hover {
+  border-color: #6366f1;
+}
+
+.batch-button.active {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: white;
+}
+
+/* ==========================================
+   LEGEND
+========================================== */
+
+.timetable-legend {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 12px 4px 16px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 600;
+}
+
+.legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.theory-dot {
+  background: #6366f1;
+}
+
+.practical-dot {
+  background: #10b981;
+}
+
+.activity-dot {
+  background: #f97316;
+}
+
+.legend-note {
+  margin-left: auto;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* ==========================================
+   TIMETABLE
+========================================== */
+
+.timetable-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  border-radius: 18px;
+  border: 1px solid #e2e6ed;
+  background: white;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+.timetable-grid {
+  min-width: 1120px;
+  display: grid;
+  grid-template-columns: 110px repeat(5, minmax(190px, 1fr));
+  position: relative;
+}
+
+.grid-corner,
+.day-header {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e7eaf0;
+  border-bottom: 1px solid #e7eaf0;
+  position: relative;
+  z-index: 5;
+}
+
+.grid-corner {
+  font-size: 12px;
+  font-weight: 800;
+  color: #6b7280;
+  background: #f8fafc;
+}
+
+.day-header {
+  background: #f8fafc;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.timetable-row {
+  display: contents;
+}
+
+.time-cell {
+  min-height: 145px;
+  padding: 16px 10px;
+  background: #fafbfc;
+  border-right: 1px solid #e7eaf0;
+  border-bottom: 1px solid #e7eaf0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  z-index: 2;
+}
+
+.time-cell strong {
+  font-size: 13px;
+}
+
+.time-cell span {
+  font-size: 11px;
+  opacity: 0.5;
+}
+
+.timetable-cell {
+  min-height: 145px;
+  padding: 8px;
+  border-right: 1px solid #e7eaf0;
+  border-bottom: 1px solid #e7eaf0;
+  background: white;
+  position: relative;
+  overflow: visible;
+}
+
+.timetable-cell.occupied {
+  background: #fcfcff;
+}
+
+.empty-slot {
+  display: flex;
+  height: 100%;
+  min-height: 125px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.2;
+}
+
+/* ==========================================
+   ENTRY CARDS
+========================================== */
+
+.timetable-entry {
+  border-radius: 11px;
+  padding: 11px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.one-hour-entry {
+  min-height: 125px;
+}
+
+.two-hour-entry {
+  min-height: 274px;
+  height: 274px;
+}
+
+/* ==========================================
+   THEORY
+========================================== */
+
+.theory-entry {
+  background: #eef2ff;
+  border-left: 4px solid #6366f1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+}
+
+/* ==========================================
+   PRACTICAL
+========================================== */
+
+.practical-entry {
+  background: #ecfdf5;
+  border-left: 4px solid #10b981;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);
+}
+
+.practical-entry.two-hour-entry {
+  min-height: 274px;
+  height: 274px;
+}
+
+/* ==========================================
+   ACTIVITY
+========================================== */
+
+.activity-entry {
+  background: #fff7ed;
+  border-left: 4px solid #f97316;
+}
+
+/* ==========================================
+   ENTRY CONTENT
+========================================== */
+
+.entry-type {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.entry-title {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+
+.entry-name {
+  font-size: 11px;
+  line-height: 1.35;
+  opacity: 0.7;
+  margin-bottom: 9px;
+}
+
+.entry-meta {
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.room-meta {
+  margin-top: 2px;
+}
+
+.duration-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 7px;
+  margin-bottom: 8px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   VALIDATION
+========================================== */
+
+.validation-panel {
+  margin-top: 22px;
+  background: white;
+  border: 1px solid #e2e6ed;
+  border-radius: 17px;
+  padding: 22px;
+}
+
+.validation-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.validation-heading h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.validation-heading p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.validation-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.validation-icon.valid {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.validation-icon.invalid {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.validation-success {
+  margin-top: 18px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.validation-success strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.validation-success span {
+  font-size: 13px;
+}
+
+.validation-failure {
+  margin-top: 18px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #9f1239;
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.timetable-empty-state {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  border: 1px dashed #d9dee8;
+  border-radius: 18px;
+  padding: 40px;
+}
+
+.empty-icon {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.timetable-empty-state h2 {
+  margin: 0 0 8px;
+}
+
+.timetable-empty-state p {
+  max-width: 520px;
+  margin: 0;
+  opacity: 0.6;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+  .configuration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .generate-button {
+    width: 100%;
+  }
+
+  .timetable-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .batch-filter-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .legend-note {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .cse-timetable-header {
+    flex-direction: column;
+  }
+
+  .timetable-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .configuration-card {
+    padding: 17px;
+  }
+}
+
+/* ==========================================
+   ALL BATCH PRACTICAL BLOCK
+========================================== */
+
+.all-batch-practical-block {
+  min-height: 270px;
+  height: 270px;
+
+  background: #ecfdf5;
+  border-left: 4px solid #10b981;
+  border-radius: 11px;
+
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  z-index: 5;
+
+  overflow: hidden;
+}
+
+.practical-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2px 3px 8px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  color: #047857;
+  letter-spacing: 0.5px;
+}
+
+.practical-block-header span:last-child {
+  font-size: 9px;
+  font-weight: 700;
+  opacity: 0.7;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   BATCH PRACTICAL GRID
+========================================== */
+
+.batch-practical-grid {
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 7px;
+
+  min-height: 0;
+}
+
+/* ==========================================
+   COMPACT PRACTICAL CARD
+========================================== */
+
+.compact-practical-card {
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 0;
+
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.06);
+}
+
+.compact-batch {
+  font-size: 10px;
+  font-weight: 800;
+
+  color: #047857;
+
+  margin-bottom: 3px;
+}
+
+.compact-subject {
+  font-size: 12px;
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 3px;
+}
+
+.compact-faculty {
+  font-size: 9px;
+  line-height: 1.25;
+
+  color: #4b5563;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.compact-room {
+  font-size: 9px;
+  font-weight: 700;
+
+  color: #047857;
+
+  margin-top: 3px;
+}
+
+/* ==========================================
+   ALL BATCH PRACTICAL ROW
+========================================== */
+
+.all-batch-practical-block
+  + .timetable-entry {
+  margin-top: 8px;
+}
+
+/* ==========================================
+   INDIVIDUAL BATCH PRACTICAL
+========================================== */
+
+.practical-entry {
+  min-height: 125px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+  .batch-practical-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .all-batch-practical-block {
+    min-height: 270px;
+    height: 270px;
+  }
+
+  .compact-practical-card {
+    padding: 6px;
+  }
+
+  .compact-subject {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   TWO-HOUR PRACTICAL BLOCKS
+   ========================================================= */
+
+.timetable-cell {
+  position: relative;
+  min-height: 145px;
+  overflow: visible;
+}
+
+/* Practical card */
+.timetable-cell .practical-entry {
+  position: relative;
+  z-index: 20;
+  min-height: 270px;
+  height: calc(200% + 12px);
+  box-sizing: border-box;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Practical continuation cell */
+.timetable-cell.practical-continuation {
+  background: transparent;
+  border-top-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+/* Don't show empty dash under a practical */
+.timetable-cell.practical-continuation
+  .empty-slot {
+  display: none;
+}
+
+/* Keep practical card above the following row */
+.timetable-cell:has(.practical-entry) {
+  z-index: 10;
+}
+
+/* Practical information */
+.practical-entry .entry-type {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.practical-entry .entry-title {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.practical-entry .entry-name {
+  font-size: 12px;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.practical-entry .entry-meta {
+  font-size: 11px;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+/* Time information at bottom */
+.practical-entry .entry-meta:last-child {
+  margin-top: auto;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ALL-BATCH PRACTICAL VIEW
+   ========================================================= */
+
+.all-batch-practical-block {
+  position: relative;
+  z-index: 20;
+  min-height: 270px;
+  height: calc(200% + 12px);
+  box-sizing: border-box;
+  border-radius: 14px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.practical-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.batch-practical-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 1fr)
+  );
+  gap: 7px;
+}
+
+.compact-practical-card {
+  min-width: 0;
+  padding: 9px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.compact-batch {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.compact-subject {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.compact-faculty,
+.compact-room {
+  font-size: 9px;
+  line-height: 1.25;
+}
+
+.compact-duration {
+  margin-top: 3px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   PRACTICAL START CELL
+   ========================================================= */
+
+.timetable-cell:has(.all-batch-practical-block) {
+  z-index: 20;
+}
+
+
+/* =========================================================
+   THEORY / ACTIVITY CARDS
+   ========================================================= */
+
+.timetable-entry {
+  position: relative;
+  z-index: 5;
+}
+
+.theory-entry,
+.activity-entry {
+  min-height: 110px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .timetable-container {
+    overflow-x: auto;
+  }
+
+  .timetable-grid {
+    min-width: 1050px;
+  }
+}
+
+@media (max-width: 700px) {
+  .timetable-grid {
+    min-width: 950px;
+  }
+
+  .timetable-cell .practical-entry,
+  .all-batch-practical-block {
+    min-height: 250px;
+  }
+
+  .batch-practical-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  @page {
+    size: landscape;
+    margin: 8mm;
+  }
+
+  .timetable-header-actions,
+  .batch-filter-card,
+  .timetable-summary,
+  .generation-status-card,
+  .no-print,
+  button {
+    display: none !important;
+  }
+
+  .timetable-container {
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  .timetable-grid {
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .timetable-cell,
+  .timetable-header-cell {
+    border: 1px solid #333 !important;
+  }
+
+  .timetable-entry {
+    box-shadow: none !important;
+    border: 1px solid #aaa !important;
+    break-inside: avoid !important;
+  }
+}

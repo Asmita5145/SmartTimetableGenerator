@@ -1,0 +1,401 @@
+.faculty-schedule-page {
+  padding: 10px 0 40px;
+}
+
+.faculty-schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.faculty-schedule-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.faculty-schedule-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+
+/* FILTER CARD */
+
+.faculty-filter-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 22px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.faculty-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faculty-filter-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.faculty-filter-group select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+}
+
+.faculty-filter-group select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+/* ALERT */
+
+.faculty-schedule-alert {
+  padding: 15px 18px;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #9a3412;
+}
+
+
+/* FACULTY INFO */
+
+.faculty-info-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.faculty-info-main {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.faculty-avatar {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.faculty-info-main h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.faculty-info-main p {
+  margin: 0 0 5px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.faculty-info-main span {
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* STATS */
+
+.faculty-stats {
+  display: flex;
+  gap: 28px;
+}
+
+.faculty-stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.faculty-stats strong {
+  font-size: 22px;
+  color: #111827;
+}
+
+.faculty-stats span {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+
+/* TIMETABLE */
+
+.faculty-timetable-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.faculty-timetable-title {
+  padding: 22px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faculty-timetable-title h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.faculty-timetable-title p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.faculty-timetable-wrapper {
+  overflow-x: auto;
+}
+
+.faculty-timetable {
+  min-width: 950px;
+}
+
+.faculty-time-header,
+.faculty-day-header {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f8fafc;
+}
+
+.faculty-time-header {
+  grid-column: 1;
+}
+
+.faculty-timetable {
+  display: grid;
+  grid-template-columns: 125px repeat(5, minmax(160px, 1fr));
+}
+
+.faculty-time-header {
+  grid-column: 1;
+}
+
+.faculty-day-header:nth-child(2) {
+  grid-column: 2;
+}
+
+.faculty-day-header:nth-child(3) {
+  grid-column: 3;
+}
+
+.faculty-day-header:nth-child(4) {
+  grid-column: 4;
+}
+
+.faculty-day-header:nth-child(5) {
+  grid-column: 5;
+}
+
+.faculty-day-header:nth-child(6) {
+  grid-column: 6;
+}
+
+
+/*
+ * Each timetable row uses display: contents
+ * so the cells align with the grid columns.
+ */
+
+.faculty-timetable-row {
+  display: contents;
+}
+
+.faculty-time-cell {
+  min-height: 120px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  background: #fafafa;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.faculty-schedule-cell {
+  position: relative;
+  min-height: 120px;
+  padding: 8px;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.faculty-schedule-cell.has-entry {
+  background: #fafbff;
+}
+
+.faculty-entry {
+  width: 100%;
+  min-height: 102px;
+  padding: 11px;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.faculty-lecture-entry {
+  background: #eef2ff;
+  border-left: 4px solid #6366f1;
+}
+
+.faculty-practical-entry {
+  background: #ecfdf5;
+  border-left: 4px solid #10b981;
+}
+
+.faculty-entry strong {
+  font-size: 13px;
+  color: #111827;
+}
+
+.faculty-entry span {
+  font-size: 12px;
+  line-height: 1.35;
+  color: #374151;
+}
+
+.faculty-entry small {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.faculty-empty-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100px;
+  color: #cbd5e1;
+  font-size: 18px;
+}
+
+
+/* EMPTY STATE */
+
+.faculty-schedule-empty {
+  padding: 70px 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px dashed #d1d5db;
+  border-radius: 16px;
+}
+
+.faculty-empty-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.faculty-schedule-empty h2 {
+  margin: 0 0 8px;
+}
+
+.faculty-schedule-empty p {
+  margin: 0;
+  color: #6b7280;
+}
+
+
+/* LOADING */
+
+.faculty-schedule-loading {
+  padding: 80px;
+  text-align: center;
+  color: #6b7280;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .faculty-filter-card {
+    grid-template-columns: 1fr;
+  }
+
+  .faculty-info-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .faculty-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .faculty-schedule-header h1 {
+    font-size: 24px;
+  }
+
+  .faculty-info-main {
+    align-items: flex-start;
+  }
+
+  .faculty-stats {
+    gap: 10px;
+  }
+
+  .faculty-stats div {
+    min-width: 65px;
+  }
+}
